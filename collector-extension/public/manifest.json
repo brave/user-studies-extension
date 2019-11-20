@@ -1,0 +1,37 @@
+{
+    "name": "Brave User Studies",
+    "version": "0.1.14",
+    "description": "Brave User Studies",
+    "permissions": [
+        "tabs",
+        "webNavigation",
+        "history",
+        "storage",
+        "alarms",
+        "unlimitedStorage",
+        "https://user-studies.brave.com/*"
+    ],
+    "options_page": "./options.html",
+	"background": {
+		"scripts": [
+            "./background.js"
+		],
+		"persistent": false
+    },
+    "browser_action": {
+        "default_popup": "./popup.html",
+        "default_icon": {
+            "16": "./img/bravexp16.png",
+            "32": "./img/bravexp32.png",
+            "48": "./img/bravexp48.png",
+            "128": "./img/bravexp128.png"
+          }
+    },
+    "icons": {
+    "16": "./img/bravexp16.png",
+    "32": "./img/bravexp32.png",
+    "48": "./img/bravexp48.png",
+    "128": "./img/bravexp128.png"
+    },
+    "manifest_version": 2
+}
