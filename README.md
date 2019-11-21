@@ -1,7 +1,5 @@
 # Brave User Studies Extension
 
-Enable users to contribute sensitive browsing behaviour information to help us improve products and services in a transparent and respectful way.
-
-The project contains the browser extension and the collection server. For instructions see the README files in the respective directory.
-
+This is a purely opt-in browser extension helping us to collect information about online user behaviour in a respectful and transparent way. Please do not install this extension if you obtained this link from anywhere else but the appropriate Brave community thread. If you have any questions feel free to reach out to us at user-studies@brave.com.
+  
 Brave Research Team
