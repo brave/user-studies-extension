@@ -23,7 +23,7 @@
                 <label for="emailInput" class="emailInput">
                     <input id="emailInput" name="email" placeholder="Enter Your Email Address" v-model="email">
                 </label>
-                <label for="consentCheckbox" class="important">
+                <label for="consentCheckbox">
                     <input type="checkbox" name="consent" id="consentCheckbox" v-model="checked">
                     I consent with the agreement outlined above
                 </label>
@@ -127,7 +127,7 @@ export default {
     },
     showMessage4: function() {
         if (this.didSendReadings === true) {
-            return true
+            return false // Disable for now
         } else {
             return false
         }
@@ -255,12 +255,12 @@ export default {
     }
 
     a:link, a:visited {
-        color: rgb(76, 84, 210);
+        color: rgb(251, 84, 43);
         text-decoration: none;
     }
     
     a:hover, a:active {
-        color: rgb(76, 84, 210, 0.75);
+        color: rgb(251, 84, 43, 0.75);
         text-decoration: none;
     }
 
@@ -271,12 +271,12 @@ export default {
     }
 
     h1 {
-        color: rgb(76, 84, 210);
+        color: rgb(59, 61, 80);
         font-size: 1.4em;
     }
 
     h2 {
-        color: rgb(76, 84, 210);
+        color: rgb(59, 61, 80);
         font-size: 1em;
         display: block;
         text-align: center;
@@ -302,33 +302,36 @@ export default {
     }
 
     button {
-        background: linear-gradient(180deg, rgb(100, 66, 173, 0.8), hsl(259, 45%, 47%));
-        color: rgb(255, 255, 255, 0.9);
+        background: rgb(251, 84, 43);
+        border-radius: 100px;
+        /* height: 40px; */
+        /* width: 196px; */
         padding: 10px 15px;
         margin: 10px 0;
-        font-size: 0.9em;
+        font-size: 1em;
         border: none;
         border-radius: 3px;
         cursor:pointer;
+        color: rgb(255, 255, 255);
     }
 
     button:hover {
-        background: linear-gradient(180deg, rgb(100, 66, 173, 0.8), rgb(100, 66, 173, 0.8));
+        background: rgb(251, 84, 43, 0.8);
     }
 
     button:active {
-        background: linear-gradient(180deg, rgb(100, 66, 173, 0.9), rgb(100, 66, 173, 0.9));
+        background: rgb(251, 84, 43, 0.9);
     }
 
     button:disabled, button[disabled] {
-        background: linear-gradient(180deg, rgb(100, 66, 173, 0.75), rgb(100, 66, 173, 0.75));
+        background: rgb(251, 84, 43, 0.75);
         color: rgb(255, 255, 255, 0.5);
     }
 
     .message {
         display: block;
-        background: rgb(76, 84, 210, 0.1);
-        border: 2px solid rgb(76, 84, 210, 0.2);
+        background: rgba(224, 224, 224, 0.1);
+        border: 2px solid rgba(224, 224, 224, 0.2);;
         padding: 10px;
         margin: 10px 0;
         border-radius: 3px;
@@ -336,7 +339,7 @@ export default {
 
     .message .close {
         margin-left: 15px;
-        color: rgb(76, 84, 210, 0.2);
+        color: rgba(224, 224, 224, 0.2);
         font-weight: bold;
         float: right;
         font-size: 20px;
@@ -395,10 +398,11 @@ export default {
     }
 
     div#agreementText {
-        height: 200px;
+        background: rgb(241, 243, 245);
+        border-radius: 4px;
+        height: 228px;
+        width: 325px;
         overflow: scroll;
-        border: 2px solid #d4d4d4;
-        border-radius: 3px;
         padding: 0 15px;
         margin: 10px 0 15px 0;
     }
@@ -412,7 +416,7 @@ export default {
     }
 
     div.bar {
-        background: linear-gradient(0deg, rgb(100, 66, 173, 1), rgb(52, 44, 201));
+        background: rgb(248, 249, 250);
         padding: 48px 32px 24px 32px;
         background-size: cover;
     }
@@ -422,18 +426,18 @@ export default {
     }
 
     div#progressValue {
-        color: rgb(255, 255, 255);
+        color: rgb(41, 47, 53);
         font-size: 2.5em;
     }
 
     div#progressValue span {
         font-size: 0.5em;
-        color: rgb(255, 255, 255, 0.7);
+        color: rgb(41, 47, 53, 0.7);
         font-weight: lighter;
     }
 
     div#progressTitle {
-        color: rgb(255, 255, 255, 0.7);
+        color: rgb(41, 47, 53, 0.7);
         font-size: 0.9em;
         font-weight: lighter;
     }
@@ -441,19 +445,19 @@ export default {
     button#sendButton {
         width: 100%;
         margin: 28px 0 0 0;
-        background: linear-gradient(180deg, rgb(211, 65, 84, 0.8), rgb(211, 65, 84, 1.0));
+        background: rgb(251, 84, 43);
     }
 
     button#sendButton:hover {
-        background: linear-gradient(180deg, rgb(211, 65, 84, 0.8), rgb(211, 65, 84, 0.8));
+        background: rgb(251, 84, 43, 0.8);
     }
 
     button#sendButton:active {
-        background: linear-gradient(180deg, rgb(211, 65, 84, 0.9), rgb(211, 65, 84, 0.9));
+        background: rgb(251, 84, 43, 0.9);
     }
 
     button#sendButton:disabled, button#sendButton[disabled] {
-        background: linear-gradient(180deg, rgb(211, 65, 84, 0.75), rgb(211, 65, 84, 0.75));
+        background: rgb(251, 84, 43, 0.75);
         color: rgb(255, 255, 255, 0.5);
     }
 </style>
