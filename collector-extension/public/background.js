@@ -12,7 +12,7 @@ function Config () {
   var manifestData = chrome.runtime.getManifest()
   self.VERSION = manifestData.version
   self.COLLECTION_PERIOD_UNIT = days
-  self.COLLECTION_PERIOD = 10 * self.COLLECTION_PERIOD_UNIT
+  self.COLLECTION_PERIOD = 14 * self.COLLECTION_PERIOD_UNIT
   self.COLLECTION_PERIOD_UNIT_NAME = 'Days'
   self.FOCUS_DURATION_THRESHOLD = 1 * seconds
   self.API_URL = 'https://user-studies.brave.com/'
