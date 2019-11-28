@@ -1,6 +1,6 @@
 {
-  "name": "brave-user-studies",
-  "version": "0.1.14",
+  "name": "brave-research-participation-tool",
+  "version": "0.1.15",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

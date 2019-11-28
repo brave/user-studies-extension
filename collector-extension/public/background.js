@@ -506,13 +506,22 @@ chrome.runtime.onStartup.addListener(function () {
   log('brwoser did start up')
 })
 
-chrome.runtime.onInstalled.addListener(function () {
-  const installedAt = util.getTime()
-  app.installedAt = installedAt
-  storage.set({ installedAt: installedAt })
-  log('Extension installed at : ' + app.installedAt)
+// when the extension is first installed, when the extension is updated
+// to a new version, and when Chrome is updated to a new version
+chrome.runtime.onInstalled.addListener(async function () {
+  try {
+    app.installedAt = await self.storage.get('installedAt')
 
-  setBadgeInfo('!', '#ff3333')
+    log('installedAt was set')
+  } catch (e) {
+    const installedAt = util.getTime()
+
+    app.installedAt = installedAt
+    storage.set({ installedAt: installedAt })
+    log('Extension installed at : ' + app.installedAt)
+
+    setBadgeInfo('!', '#ff3333')
+  }
 })
 
 // App: Initialize listeners
